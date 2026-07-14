@@ -1,0 +1,7 @@
+option('vulkan', type : 'feature', value : 'auto', description : 'Build the Vulkan adapter')
+option('dx12', type : 'feature', value : 'disabled', description : 'Build the Direct3D 12 adapter')
+option('samples', type : 'boolean', value : false, description : 'Build sample applications')
+option('tests', type : 'boolean', value : true, description : 'Build CPU and API tests')
+option('shader_debug', type : 'boolean', value : false, description : 'Include shader debug data')
+option('fp16', type : 'boolean', value : false, description : 'Build capability-selected FP16 variants')
+option('validation', type : 'boolean', value : false, description : 'Enable optional validation tooling')

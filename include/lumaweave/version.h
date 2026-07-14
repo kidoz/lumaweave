@@ -1,0 +1,10 @@
+#ifndef LUMAWEAVE_VERSION_H
+#define LUMAWEAVE_VERSION_H
+
+#define LW_VERSION_MAJOR 0
+#define LW_VERSION_MINOR 1
+#define LW_VERSION_PATCH 0
+
+#define LW_API_VERSION 1u
+
+#endif
