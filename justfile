@@ -6,7 +6,9 @@ format:
     set -euo pipefail
     files=()
     while IFS= read -r -d '' file; do
-        files+=("$file")
+        if [[ -f "$file" ]]; then
+            files+=("$file")
+        fi
     done < <(git ls-files --cached --others --exclude-standard -z -- \
         '*.c' '*.cc' '*.cpp' '*.cxx' \
         '*.h' '*.hh' '*.hpp' '*.hxx' \
@@ -26,7 +28,9 @@ lint:
     fi
     files=()
     while IFS= read -r -d '' file; do
-        files+=("$file")
+        if [[ -f "$file" ]]; then
+            files+=("$file")
+        fi
     done < <(git ls-files --cached --others --exclude-standard -z -- \
         '*.c' '*.cc' '*.cpp' '*.cxx' \
         ':!subprojects/**')
